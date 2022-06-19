@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <h3 style="text-align: center; font-weight: bold;">Калькулятор чаевых</h3>
+        <p style="border-bottom: 2px solid #A6A6A6"></p>
+        <br />
+        <label for="amount">Сумма счета</label>
+        <br />
+        <button style="background-color: #A6A6A6;"><i class="fa-solid fa-ruble-sign"></i></i></button
+        ><input id="amount" type="number" />
+        <br />
+        <br />
+        <label for="guest">Количество гостей</label>
+        <br />
+        <button style="background-color: #A6A6A6;"><i class="fa-solid fa-person"></i></button
+        ><input id="guest" type="number" />
+        <br />
+        <br />
+        <label for="quality">Качество обслуживания</label>
+        <br />
+        <select id="quality" style="font-family: 'Montserrat', sans-serif; color: #333333;">
+          <option disabled selected value="0" style="font-family: 'Montserrat', sans-serif; color: #333333;">Выберите...</option>
+          <option value="0.3" style="font-family: 'Montserrat', sans-serif;">30% - Замечательно</option>
+          <option value="0.2" style="font-family: 'Montserrat', sans-serif;">20% - Хорошо</option>
+          <option value="0.15" style="font-family: 'Montserrat', sans-serif;">15% - Нормально</option>
+          <option value="0.1" style="font-family: 'Montserrat', sans-serif;">10% - Плохо</option>
+          <option value="0.05" style="font-family: 'Montserrat', sans-serif;">5% - Ужасно (но не слишком)</option>
+        </select>
+        <div style="text-align: center">
+          <p style="border-top: 2px solid #A6A6A6"></p>
+          <button
+            onclick="calculate()"
+            style="border-radius: 5px; width: fit-content; margin-bottom: 20px; cursor: pointer;"
+          >
+            Рассчитать
+          </button>
+        </div>
+      </div>
+      <div id="tip-amount"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
